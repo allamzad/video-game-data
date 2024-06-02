@@ -1,0 +1,169 @@
+/**
+ * Name: Allam Amzad
+ * Email: aamzad@caltech.edu
+ * Date: 5/26/2024
+
+ * This is the styles.css file for my CP3 assignment. 
+ * This stylesheet builds the game view of the Higher 
+ * or Lower: City Population game where users can 
+ * choose between which of two cities has a higher 
+ * population. This game was inspired by the Higher Lower
+ * game (https://www.higherlowergame.com/).
+ */
+
+/* Image Source: Vecteezy, Author: riokaloka 
+   [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] */
+body {
+    background-image: url("media/mario.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Flex containers */
+header, #data-selection, #data-dropdown-div, #rank-queries, 
+#game-queries, #game-rec, #game-card-info, #rec-card {
+    display: flex;
+    justify-content: center;
+}
+
+#rank-queries, #game-queries {
+    flex-wrap: wrap;
+}
+
+#data-selection, #game-rec, #rec-card {
+    flex-direction: column;
+}
+
+header, #data-selection, #data-dropdown-div, #rank-queries, 
+#game-queries, #game-rec, #game-card-info, #rec-card,
+#rank-queries, #game-queries {
+    align-items: center;
+}
+
+/* Source: CDN Fonts, Author: Unknown
+   [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] */
+h1, h2, footer p, select, button {
+    font-family: 'Nintend', sans-serif;
+}
+
+table, tr, td, #game-card h2, #game-card p, #rec-card h2, 
+#rec-card p, label {
+    font-family: sans-serif;
+}
+
+footer, #game-card p, #rec-card p, #message-area {
+    font-size: 20px;
+}
+
+h1, h2, p, label, table, tr, td {
+    color: white;
+}
+
+h1, h2, footer p, label, select {
+    text-align: center;
+}
+
+header h1, table, #game-rec button, #data-dropdown-div {
+    margin: auto;
+}
+
+table, #rank-queries, #game-queries, #data-dropdown-div {
+    background-color: #e7b616;
+}
+
+table, tr, #data-selection, #rank-request, #game-rank, 
+#game-rec, #game-card, #rec-card {
+    border: solid;
+}
+
+table, tr, select, button, #rank-queries, #game-queries, 
+#data-dropdown-div {
+    border-radius: 10px;
+}
+
+select, button, #rank-queries, #game-queries, 
+#data-dropdown-div {
+    padding: 10px;
+}
+
+select, #game-rec button {
+    width: 250px;
+}
+
+/* Divider styling. */
+#data-selection, #rank-request, #game-rank, #game-rec, 
+#game-card, #rec-card {
+    margin-bottom: 80px;
+    background-color: #FFD700;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: white;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+/* Text outline for footer text */
+footer p, a {
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+input {
+    margin-left: 5px;
+    margin-right: 40px;
+}
+
+select {
+    margin-right: 20px;
+}
+
+#sales-info {
+    margin-left: 50px;
+}
+
+#game-info {
+    margin-right: 50px;
+}
+
+table {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+table, tr {
+    border-color: black;
+    border-width: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a:visited {
+    color: #e7b616;
+}
+
+#rec-card img {
+    width: 300px;
+}
+
+#game-rec.hidden, #back-btn.hidden, #data-selection.hidden, 
+.hidden {
+    display: none;
+}  

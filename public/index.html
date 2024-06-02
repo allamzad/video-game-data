@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+  Name: Allam Amzad
+  Email: aamzad@caltech.edu
+  Date: 6/2/2024
+
+  HTML for the Video Game Data where users can choose from a 
+  dropdown that allows them to pick between receiving ranking
+  data based on a query, a specific game's rank, or a randomized
+  game recommendation. This page features the website's name
+  (Video Game Data), the selection dropdown, and a footer
+  accrediting the sources of the data used.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Game Data</title>
+
+  <!-- Source: CDN Fonts, Author: Unknown
+       [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+  <link href="https://fonts.cdnfonts.com/css/nintend-3" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="utils.js"></script>
+  <script defer src="game.js"></script>
+</head>
+
+<body>
+  <header>
+    <button id="back-btn" class="hidden">Back to data selection.</button>
+    <h1>Video Game Data</h1>
+    <p id="message-area" class="hidden"></p>
+  </header>
+  <main>
+      <section id="video-game-data">
+        <!-- Data selection dropdown. -->
+        <div id="data-selection">
+          <h2>Choose the information you would like to view:</h2>
+          <div id="data-dropdown-div">
+            <select name="data-dropdown" id="data-dropdown">
+              <option value="all-rankings">All Rankings</option>
+              <option value="game-rank">Game Rank</option>
+              <option value="game-recommendation">Game Recommendation</option>
+            </select>
+            <button id="data-submit-btn">Submit</button>
+          </div>
+        </div>
+        <!-- Query-based ranking. -->
+        <div id="rank-request" class="hidden">
+          <h2>Rank Request (optional fields)</h2>
+          <div id="rank-queries">
+            <label for="rank-year">Year (1980-2020):</label>
+            <input type="number" id="rank-year" name="rank-year" min="1980" max="2020">
+            <label for="rank-genre">Genre:</label>
+            <input type="text" id="rank-genre" name="rank-genre">
+            <label for="rank-publisher">Publisher:</label>
+            <input type="text" id="rank-publisher" name="rank-publisher">
+            <label for="rank-platform">Platform:</label>
+            <input type="text" id="rank-platform" name="rank-platform">
+            <label for="rank-limit">Number of items to rank:</label>
+            <input type="number" id="rank-limit" name="rank-limit" min="1" max="16600">
+            <button id="rank-search-btn">Search</button>
+          </div>
+        </div>
+        <!-- Game-specific ranking. -->
+        <div id="game-rank" class="hidden">
+          <h2>Game Rank</h2>
+          <div id="game-queries">
+            <label for="game-game">Game (required):</label>
+            <input type="text" id="game-game" name="game-game" required>
+            <label for="game-platform">Platform:</label>
+            <input type="text" id="game-platform" name="game-platform">
+            <button id="game-search-btn">Search</button>
+          </div>
+        </div>
+        <!-- Randomized video game recommendation. -->
+        <div id="game-rec" class="hidden">
+          <h2>Game Recommendation</h2>
+          <button id="game-rec-btn">Recommend me a game!</button>
+        </div>
+      </section>
+  </main>
+  <footer>
+    <p>
+      Data from 
+      <!-- Source: Kaggle, Author: Ulrik Thyge Pederson
+           [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+      <a href="https://www.kaggle.com/datasets/ulrikthygepedersen/video-games-sales/data" target="_blank">Video Game Sales</a>
+      by Ulrik Thyge Pederson and 
+      <!-- Source: Kaggle, Author: Davis Nyagami
+           [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+      <a href="https://www.kaggle.com/datasets/nyagami/video-game-ratings-from-imdb" target="_blank">Video Game Ratings from IMDb</a>
+      by Davis Nyagami and 
+      <!-- Source: RAWG, Author: RAWG
+           [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+      <a href="https://rawg.io/" target="_blank">RAWG</a>
+    </p>
+  </footer>
+</body>
+</html>

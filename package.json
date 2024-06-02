@@ -1,0 +1,18 @@
+{
+  "name": "cp4",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Allam Amzad",
+  "license": "ISC",
+  "description": "Video Game Data API",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv": "^6.3.9",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security"
+  }
+}
